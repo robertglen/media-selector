@@ -1,4 +1,4 @@
-; A simple custom messagebox that uses the MessageLoop mode
+; A custom messagebox that uses the MessageLoop mode
 
 #include <GUIConstantsEx.au3>
 #include <ButtonConstants.au3>
@@ -13,6 +13,8 @@ If _Singleton("pic_my_media_player", 0) = 0 Then
 EndIf
 
 ; If either XBMC or WMC is running... then exit this script
+; The WMC executable ehshell.exe was renamed with a _m on my system
+; to prevent Windows from launching WMC
 ;If ProcessExists("ehshell_m.exe") Or ProcessExists("ehshell.exe") Then
 If ProcessExists("ehshell_m.exe") Then
   ;Send("#!{ENTER}")
